@@ -1,0 +1,31 @@
+Insertion order : A102 A25 A7 B100 B12 A120 B3 A45
+
+(a) Inorder traversal of BST:
+ A102 A120 A25 A45 A7 B100 B12 B3
+
+(a) Tree structure analysis:
+ Number of nodes : 8
+ Height of tree : 5
+ Theoretical best-case height for 8 nodes : floor(log2(n)) = 3
+ Theoretical worst-case height for 8 nodes : n - 1 = 7
+
+(b) BST Search vs Linear Search comparisons:
+ Query "A45  " -> FOUND     | BST comparisons: 4 | Linear comparisons: 8
+ Query "B100 " -> FOUND     | BST comparisons: 4 | Linear comparisons: 4
+ Query "A7   " -> FOUND     | BST comparisons: 3 | Linear comparisons: 3
+ Query "B999 " -> NOT FOUND | BST comparisons: 6 | Linear comparisons: 8
+
+(c) Rebuilding BST by inserting the SAME ids in SORTED order:
+ A102 A120 A25 A45 A7 B100 B12 B3
+
+ Inorder traversal (should be identical set, same sorted sequence):
+ A102 A120 A25 A45 A7 B100 B12 B3
+
+ Height of SKEWED tree (sorted insertion) : 7
+ Height of ORIGINAL tree (given order) : 5
+
+ Search comparisons on the SKEWED tree:
+ Query "A45  " -> FOUND     | BST comparisons: 4 | Linear comparisons: 8
+ Query "B100 " -> FOUND     | BST comparisons: 6 | Linear comparisons: 4
+ Query "A7   " -> FOUND     | BST comparisons: 5 | Linear comparisons: 3
+ Query "B999 " -> NOT FOUND | BST comparisons: 8 | Linear comparisons: 8
