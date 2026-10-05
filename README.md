@@ -61,6 +61,7 @@ Key length can also affect the actual cost of `strcmp()`, since longer keys or k
 - `trace_table.md` – Important intermediate steps
 - `comparison_table.md` – BST and linear search comparison
 - `complexity_analysis.md` – Time and space complexity analysis
+- `conclusion.md` – Final conclusion and recommended approach
 
 ## Complexity
 
